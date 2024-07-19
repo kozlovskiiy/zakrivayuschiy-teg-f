@@ -17,4 +17,11 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--regular-font, Arial, sans-serif);
+  font-variation-settings: "wght" var(--font-weight-regular);
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  background-image: var(--background-gradient);
+  background-size: cover;
+  background-attachment: fixed;
 }
