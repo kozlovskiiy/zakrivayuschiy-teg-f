@@ -12,3 +12,129 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  top: 1px;
+  left: -14px;
+}
+
+.theme-menu__button::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid currentColor;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.hover-animation::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  background-color: var(--accent-color);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-animation:hover::before {
+  transform: scaleX(1);
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.03s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:hover .core {
+  transition: fill 0.3s linear;
+  fill: var(--accent-color);
+}
+
+.like-icon:active .main-body {
+  transition: fill 0.3s linear 0.05s;
+  fill: var(--heart-color);
+}
+
+.like-icon:active .core {
+  transition: fill 0.3s linear;
+  fill: var(--heart-color);
+}
+
+.like-icon.is-liked .core {
+  transition: fill 0.3s linear;
+  fill: var(--heart-color);
+}
+
+.like-icon.is-liked .main-body {
+  transition: fill 0.3s linear 0.05s;
+  fill: var(--heart-color);
+}
+
+.like-icon.is-liked .contour {
+  transition: fill 0.3s linear 0.06s;
+  fill: var(--heart-color);
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-size 0.3s ease-in 0.1s alternate;
+  transform-origin: center;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-opacity 0.3s ease-in 0.3s alternate;
+}
+
+.contour {
+  transition: fill 0.1s linear;
+}
+
+@keyframes sparks-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heart-size {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes arrow {
+  from {
+    top: 1px;
+    left: -14px;
+  }
+  to {
+    top: 1px;
+    left: -10px;
+  }
+}
