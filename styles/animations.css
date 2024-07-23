@@ -17,6 +17,7 @@
   position: absolute;
   top: 1px;
   left: -14px;
+  animation: arrow 0.5s infinite ease-in-out alternate;
 }
 
 .theme-menu__button::after {

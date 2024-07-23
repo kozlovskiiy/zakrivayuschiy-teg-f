@@ -80,7 +80,7 @@
 }
 
 .card {
-  margin: 0 auto;
+  margin: 0 auto 50px;
   inline-size: var(--inline-content-size);
   background-color: var(--background-color);
   border: 2px solid var(--accent-color);
@@ -88,7 +88,7 @@
 
 .card__title {
   font-size: 18px;
-  font-variation-settings: 'wght' 785;
+  font-variation-settings: 'wght' var(--font-weight-bold);
   padding-block: 5px;
   padding-inline: 8px;
 }
@@ -98,7 +98,7 @@
 }
 
 .card__image {
-  width: 100%;
+  inline-size: 100%;
 }
 
 .card__watermark {
@@ -129,6 +129,7 @@
 }
 
 .card__paragraph {
+  font-variation-settings: 'wght' var(--font-weight-regular);
   font-size: 18px;
   line-height: 116%;
 }
@@ -138,7 +139,7 @@
 }
 
 .card__paragraph:last-of-type {
-  margin-block-end: 20px;
+  margin-block-end: 23px;
 }
 
 .card-buttons__container {
@@ -152,7 +153,7 @@
   border: none;
   cursor: pointer;
   border: 2px solid transparent;
-  height: 39px;
+  block-size: 39px;
 }
 
 .card__icon-button:focus {
@@ -193,8 +194,8 @@
   display: block;
   font-family: var(--pixel-font);
   font-size: 14px;
-  padding-block: 18.5px;
-  padding-inline: 21px;
+  padding-block: 16.5px;
+  padding-inline: 19px;
   background-color: var(--background-color);
   border: 2px solid var(--accent-color);
   margin: 0 auto;
@@ -202,8 +203,8 @@
 }
 
 .floppy-svg {
-  width: 21px;
-  height: 21px;
+  inline-size: 21px;
+  block-size: 21px;
   mix-blend-mode: difference;
   color: var(--button-background);
 }
@@ -218,8 +219,8 @@
 }
 
 .floppy-svg__dialog {
-  width: 39px;
-  height: 39px;
+  inline-size: 39px;
+  block-size: 39px;
   flex: none;
 }
 
@@ -231,11 +232,11 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  margin-bottom: 30px;
+  margin-block-end: 30px;
 }
 
 .dialog__button {
-  width: 100%;
+  inline-size: 100%;
   padding-block: 12.5px;
 }
 
@@ -244,16 +245,66 @@
   backdrop-filter: blur(3px);
 } 
 
+.footer {
+  margin-block-end: 103px;
+}
+
 @media (max-width: 375px) {
   .header {
     padding-block-start: 120px;
   }
 
   .card__paragraph:last-of-type {
-    margin-block-end: 23px;
+    margin-block-end: 24px;
   }
 
   .dialog__paragraph {
     inline-size: 198px;
   }
+
+  .memory-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 15.5px;
+    gap: 8px;
+  }
+
+  .floppy-svg {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+}
+
+.filter_brightness {
+  filter: brightness(200%);
+}
+
+.filter_contrast {
+  filter: contrast(160%);
+}
+
+.filter_blur {
+  filter: blur(0.3rem);
+}
+
+.filter_opacity {
+  filter: opacity(0.8);
+}
+
+.filter_grayscale {
+  filter: grayscale(0.8);
+}
+
+.filter_saturate {
+  filter: saturate(158%);
+}
+
+.filter_rotate {
+  filter: hue-rotate(-90deg);
+}
+
+.filter_sepia-contrast {
+  filter: sepia(1) contrast(2) brightness(200%);
 }

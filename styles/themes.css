@@ -13,6 +13,8 @@
 }
 
 :root.theme-dark {
+  --font-weight-regular: 465;
+  --font-weight-bold: 785;
   --button-background: #00CC14;
   --background-color: #000;
   --accent-color: #00CC14;
@@ -23,6 +25,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --font-weight-regular: 465;
+    --font-weight-bold: 785;
     --button-background: #00CC14;
     --background-color: #000;
     --accent-color: #00CC14;
