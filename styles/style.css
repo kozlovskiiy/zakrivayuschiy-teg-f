@@ -79,8 +79,14 @@
   opacity: 0.6;
 }
 
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .card {
-  margin: 0 auto 50px;
+  margin: 0 auto;
   inline-size: var(--inline-content-size);
   background-color: var(--background-color);
   border: 2px solid var(--accent-color);
@@ -246,7 +252,7 @@
 } 
 
 .footer {
-  margin-block-end: 103px;
+  padding-block: 50px 103px;
 }
 
 @media (max-width: 375px) {
