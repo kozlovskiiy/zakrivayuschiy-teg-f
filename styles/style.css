@@ -94,6 +94,7 @@
 
 .card__title {
   font-size: 18px;
+  border-bottom: 2px solid var(--accent-color);
   font-variation-settings: 'wght' var(--font-weight-bold);
   padding-block: 5px;
   padding-inline: 8px;
@@ -104,6 +105,8 @@
 }
 
 .card__image {
+  display: block;
+  height: 100%;
   inline-size: 100%;
 }
 
@@ -132,6 +135,7 @@
 
 .card-text__container {
   padding: 25px;
+  border-top: 2px solid var(--accent-color);
 }
 
 .card__paragraph {
@@ -203,7 +207,7 @@
   padding-inline: 19px;
   background-color: var(--background-color);
   border: 2px solid var(--accent-color);
-  margin: 0 auto;
+  margin: 50px auto 103px;
   cursor: pointer;
 }
 
@@ -230,7 +234,7 @@
 }
 
 .dialog__paragraph {
-  inline-size: 234px;
+  max-inline-size: 234px;
 }
 
 .dialog[open] .dialog__text {
@@ -243,15 +247,12 @@
 .dialog__button {
   inline-size: 100%;
   padding-block: 12.5px;
+  margin: 0;
 }
 
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.6);
   backdrop-filter: blur(3px);
-} 
-
-.footer {
-  padding-block: 50px 103px;
 }
 
 @media (max-width: 375px) {
