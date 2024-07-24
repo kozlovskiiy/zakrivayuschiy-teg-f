@@ -5,11 +5,16 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 :root.theme-light {
-  --button-background: #fff;
-  --background-color: #fff;
-  --accent-color: #000;
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
+    --heart-color: #FF0000;
+    --button-background: #fff;
+    --inline-content-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+    --regular-font: 'Inter-Variable', sans-serif;
+    --pixel-font: 'PressStart2P', serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --background-color: #fff;
+    --accent-color: #000;
+    --background-gradient: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px), linear-gradient(#e7e7e7, #1a1a1a);
 }
 
 :root.theme-dark {
